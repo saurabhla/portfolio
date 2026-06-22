@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0e0f17">
+<script>
+  (function () {
+    try {
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+      if (sessionStorage.getItem("preloader_seen_v1") === "1") { document.documentElement.classList.add("skip-preloader"); }
+    } catch {}
+  })();
+</script>
+<style>
+  html[data-theme="dark"] { background:#0e0f17; color-scheme: dark; }
+  .skip-preloader #preloader { display:none !important; }
+</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SQL Data Warehouse &amp; Analytics, Case Study</title>
+  <meta name="description" content="A medallion-architecture SQL data warehouse, ETL from ERP/CRM/Excel into Bronze/Silver/Gold star schemas serving BI, ad-hoc SQL and ML on a trusted, governed foundation." />
+  <link href="../style.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-badge">SL</span></a>
+      <nav class="nav"><a href="../index.html#projects">← Back to Projects</a></nav>
+    </div>
+  </header>
+
+  <main class="container"><div class="proj-wrap wide">
+    <section class="project-hero">
+      <span class="proj-tag-line">Data Engineering · Warehousing &amp; Modeling</span>
+      <h1 class="project-title">SQL Data Warehouse &amp; Analytics</h1>
+      <p class="project-sub">
+        A modern <strong>SQL data warehouse</strong> on a <strong>Medallion</strong> architecture that turns siloed,
+        inconsistent ERP/CRM/Excel data into a trusted, governed foundation, clean, auditable and ready for BI, ad-hoc SQL
+        and machine learning.
+      </p>
+      <div class="meta">
+        <span class="tag">SQL Server</span><span class="tag">ETL</span><span class="tag">Data Modeling</span>
+        <span class="tag">Medallion</span><span class="tag">Data Governance</span><span class="tag">GitHub</span>
+      </div>
+      <div class="links">
+        <a class="btn btn-primary" href="https://github.com/saurabhla/sql-data-warehouse-project" target="_blank" rel="noopener">GitHub, Warehouse</a>
+        <a class="btn btn-primary" href="https://github.com/saurabhla/sql-data-analysis-project" target="_blank" rel="noopener">GitHub, Analytics</a>
+        <a class="btn" href="ai-validation-pipeline.html" rel="noopener">NEXT</a>
+      </div>
+    </section>
+
+    <figure class="project-figure">
+      <img src="../assets/fig-dwh.svg" alt="Medallion architecture diagram: bronze, silver and gold layers feeding BI, SQL and ML" loading="lazy">
+      <figcaption>Bronze (raw, traceable) → Silver (clean, standardised) → Gold (star-schema, business-ready), consumed by Power BI, ad-hoc SQL and ML.</figcaption>
+    </figure>
+
+    <section class="section-narrow">
+      <h2>End-to-end lifecycle</h2>
+      <ol class="lifecycle">
+        <li><span class="lc-stage">Business Problem</span><p>Source data was siloed and inconsistent across ERP, CRM and Excel, blocking reliable reporting and forcing analysts to re-clean the same data repeatedly.</p></li>
+        <li><span class="lc-stage">Business Context</span><p>The business needed one trusted, governed foundation that BI, ad-hoc analysis and ML could all build on with confidence.</p></li>
+        <li><span class="lc-stage">Data Sources</span><p>ERP, CRM and Excel extracts representing core operational and commercial data.</p></li>
+        <li><span class="lc-stage">Data Engineering / ETL</span><p>A <strong>Medallion</strong> pipeline, Bronze (raw, traceable), Silver (clean, standardised), Gold (business-ready), with idempotent truncate-insert batches and clear naming conventions.</p></li>
+        <li><span class="lc-stage">Data Modeling</span><p><strong>Star schemas</strong> in Gold (<code>fact_sales</code>, <code>dim_*</code>) for simple joins and fast reporting; version-controlled SQL with a clear bronze/silver/gold structure.</p></li>
+        <li><span class="lc-stage">Analytics &amp; Statistical Analysis</span><p>Analytics-ready Gold views plus ad-hoc SQL for validation and exploration.</p></li>
+        <li><span class="lc-stage">Visualization &amp; Reporting</span><p>Gold layer feeds <strong>Power BI</strong> dashboards and analyst self-service downstream.</p></li>
+        <li><span class="lc-stage">Machine Learning / AI</span><p>Curated Gold views double as clean, consistent feature sources for ML.</p></li>
+        <li><span class="lc-stage">Business Impact</span><p>A clean, auditable, scalable foundation that made downstream analytics faster and far more trustworthy.</p></li>
+        <li><span class="lc-stage">Lessons Learned</span><p>Layering, naming conventions and documentation are what make a warehouse maintainable; governance is an investment that pays back quickly.</p></li>
+      </ol>
+    </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><p>© <span id="year"></span> Saurabh Lagad</p></div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

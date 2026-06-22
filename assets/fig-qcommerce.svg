@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" role="img" aria-label="Q-commerce Power BI dashboard mockup">
+  <rect width="760" height="360" fill="#12131f"/>
+  <text x="40" y="36" fill="#e8eaff" font-family="Inter,Arial" font-size="16" font-weight="800">Q-commerce sales dashboard (layout)</text>
+
+  <!-- KPI tiles -->
+  <g font-family="Inter,Arial">
+    <g transform="translate(40,54)">
+      <rect width="164" height="62" rx="10" fill="#181a2b" stroke="#272a45"/>
+      <text x="14" y="26" fill="#9aa0c0" font-size="11">Total Sales</text>
+      <text x="14" y="48" fill="#bfa8ff" font-size="20" font-weight="800">$1.20M</text>
+    </g>
+    <g transform="translate(218,54)">
+      <rect width="164" height="62" rx="10" fill="#181a2b" stroke="#272a45"/>
+      <text x="14" y="26" fill="#9aa0c0" font-size="11">Avg Sales</text>
+      <text x="14" y="48" fill="#bfa8ff" font-size="20" font-weight="800">$141</text>
+    </g>
+    <g transform="translate(396,54)">
+      <rect width="164" height="62" rx="10" fill="#181a2b" stroke="#272a45"/>
+      <text x="14" y="26" fill="#9aa0c0" font-size="11">Items</text>
+      <text x="14" y="48" fill="#bfa8ff" font-size="20" font-weight="800">8,523</text>
+    </g>
+    <g transform="translate(574,54)">
+      <rect width="146" height="62" rx="10" fill="#181a2b" stroke="#272a45"/>
+      <text x="14" y="26" fill="#9aa0c0" font-size="11">Avg Rating</text>
+      <text x="14" y="48" fill="#bfa8ff" font-size="20" font-weight="800">4.1★</text>
+    </g>
+  </g>
+
+  <!-- Bar chart -->
+  <g transform="translate(40,132)" font-family="Inter,Arial">
+    <rect width="340" height="196" rx="12" fill="#181a2b" stroke="#272a45"/>
+    <text x="16" y="26" fill="#cdd2f0" font-size="12.5" font-weight="700">Sales by outlet type</text>
+    <g>
+      <rect x="24" y="60" width="40" height="110" rx="4" fill="#7c5cff"/>
+      <rect x="86" y="86" width="40" height="84" rx="4" fill="#8f72ff"/>
+      <rect x="148" y="74" width="40" height="96" rx="4" fill="#a78bff"/>
+      <rect x="210" y="104" width="40" height="66" rx="4" fill="#b9a3ff"/>
+      <rect x="272" y="120" width="40" height="50" rx="4" fill="#cbbcff"/>
+    </g>
+    <line x1="24" y1="170" x2="316" y2="170" stroke="#3a3f5e" stroke-width="1.5"/>
+  </g>
+
+  <!-- Donut -->
+  <g transform="translate(400,132)" font-family="Inter,Arial">
+    <rect width="320" height="196" rx="12" fill="#181a2b" stroke="#272a45"/>
+    <text x="16" y="26" fill="#cdd2f0" font-size="12.5" font-weight="700">Sales by outlet size</text>
+    <g transform="translate(96,116)">
+      <circle r="56" fill="none" stroke="#23263f" stroke-width="22"/>
+      <circle r="56" fill="none" stroke="#7c5cff" stroke-width="22" stroke-dasharray="150 352" transform="rotate(-90)"/>
+      <circle r="56" fill="none" stroke="#a78bff" stroke-width="22" stroke-dasharray="100 352" stroke-dashoffset="-150" transform="rotate(-90)"/>
+      <circle r="56" fill="none" stroke="#cbbcff" stroke-width="22" stroke-dasharray="102 352" stroke-dashoffset="-250" transform="rotate(-90)"/>
+    </g>
+    <g transform="translate(184,84)" font-size="11" fill="#cdd2f0">
+      <circle cx="6" cy="6" r="5" fill="#7c5cff"/><text x="18" y="10">Medium</text>
+      <circle cx="6" cy="32" r="5" fill="#a78bff"/><text x="18" y="36">Small</text>
+      <circle cx="6" cy="58" r="5" fill="#cbbcff"/><text x="18" y="62">High</text>
+    </g>
+  </g>
+</svg>

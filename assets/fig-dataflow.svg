@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 170" role="img" aria-label="Data flow from source systems through ETL, validation, modeling and governance to Power BI">
+  <rect width="880" height="170" fill="#12131f"/>
+  <text x="20" y="30" fill="#e8eaff" font-family="Inter,Arial" font-size="15" font-weight="800">From source systems to trusted Power BI, the data flow I own end-to-end</text>
+
+  <!-- connectors -->
+  <g stroke="#7c5cff" stroke-width="2.5" stroke-dasharray="5 5" opacity="0.85">
+    <line x1="138" y1="92" x2="164" y2="92"/>
+    <line x1="282" y1="92" x2="308" y2="92"/>
+    <line x1="426" y1="92" x2="452" y2="92"/>
+    <line x1="570" y1="92" x2="596" y2="92"/>
+    <line x1="714" y1="92" x2="740" y2="92"/>
+  </g>
+
+  <g font-family="Inter,Arial" text-anchor="middle">
+    <!-- 1 Sources -->
+    <g transform="translate(20,64)">
+      <rect width="118" height="58" rx="12" fill="#181a2b" stroke="#272a45"/>
+      <text x="59" y="26" fill="#cdd2f0" font-size="13" font-weight="800">Sources</text>
+      <text x="59" y="44" fill="#8a90b8" font-size="9">struct + semi-struct</text>
+    </g>
+    <!-- 2 ETL -->
+    <g transform="translate(164,64)">
+      <rect width="118" height="58" rx="12" fill="#181a2b" stroke="#272a45"/>
+      <text x="59" y="26" fill="#cdd2f0" font-size="13" font-weight="800">Ingest &amp; ETL</text>
+      <text x="59" y="44" fill="#8a90b8" font-size="9">SQL·Py·ADF·Fabric</text>
+    </g>
+    <!-- 3 Validate & QA -->
+    <g transform="translate(308,64)">
+      <rect width="118" height="58" rx="12" fill="#1a1530" stroke="#7c5cff"/>
+      <text x="59" y="26" fill="#e3def7" font-size="13" font-weight="800">Validate &amp; QA</text>
+      <text x="59" y="44" fill="#bfa8ff" font-size="9">rules · accuracy</text>
+    </g>
+    <!-- 4 Model -->
+    <g transform="translate(452,64)">
+      <rect width="118" height="58" rx="12" fill="#181a2b" stroke="#272a45"/>
+      <text x="59" y="26" fill="#cdd2f0" font-size="13" font-weight="800">Model</text>
+      <text x="59" y="44" fill="#8a90b8" font-size="9">star schema · integrate</text>
+    </g>
+    <!-- 5 Govern -->
+    <g transform="translate(596,64)">
+      <rect width="118" height="58" rx="12" fill="#1a1530" stroke="#7c5cff"/>
+      <text x="59" y="26" fill="#e3def7" font-size="13" font-weight="800">Govern</text>
+      <text x="59" y="44" fill="#bfa8ff" font-size="9">metadata · lineage</text>
+    </g>
+    <!-- 6 Power BI -->
+    <g transform="translate(740,64)">
+      <rect width="118" height="58" rx="12" fill="#10221c" stroke="#33c5a6"/>
+      <text x="59" y="26" fill="#7ff0d2" font-size="13" font-weight="800">Power BI</text>
+      <text x="59" y="44" fill="#5fbfa6" font-size="9">dashboards · DAX</text>
+    </g>
+  </g>
+
+  <text x="20" y="150" fill="#7e8299" font-family="Inter,Arial" font-size="11">Cloud &amp; on-prem · documented data flows · quality assured at every step</text>
+</svg>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0e0f17">
+<script>
+  (function () {
+    try {
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+      if (sessionStorage.getItem("preloader_seen_v1") === "1") { document.documentElement.classList.add("skip-preloader"); }
+    } catch {}
+  })();
+</script>
+<style>
+  html[data-theme="dark"] { background:#0e0f17; color-scheme: dark; }
+  .skip-preloader #preloader { display:none !important; }
+</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Risk Prediction on Imbalanced Data, Case Study</title>
+  <meta name="description" content="A recall-first risk-prediction pipeline on imbalanced data, SMOTE balancing and model benchmarking (LR, SVM, k-NN, Random Forest, XGBoost) to minimise costly false negatives." />
+  <link href="../style.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-badge">SL</span></a>
+      <nav class="nav"><a href="../index.html#projects">← Back to Projects</a></nav>
+    </div>
+  </header>
+
+  <main class="container"><div class="proj-wrap wide">
+    <section class="project-hero">
+      <span class="proj-tag-line">Data Science · Risk Analytics &amp; Imbalanced ML</span>
+      <h1 class="project-title">Risk Prediction on Imbalanced Data</h1>
+      <p class="project-sub">
+        A supervised <strong>risk-prediction</strong> pipeline (heart-attack risk) built the way enterprise risk problems
+        demand, <strong>recall-first</strong>, because a missed positive is the costliest error. Methodology transfers
+        directly to fraud, churn and credit-risk analytics.
+      </p>
+      <div class="meta">
+        <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">SMOTE</span>
+        <span class="tag">XGBoost</span><span class="tag">Risk Analytics</span><span class="tag">MLflow</span>
+      </div>
+      <div class="links">
+        <a class="btn btn-primary" href="https://github.com/saurabhla/heart-attack-risk-prediction" target="_blank" rel="noopener">GitHub Repo</a>
+        <a class="btn" href="qcommerce.html" rel="noopener">NEXT</a>
+      </div>
+    </section>
+
+    <figure class="project-figure">
+      <img src="../assets/fig-heart.svg" alt="Confusion matrix prioritising recall, with SMOTE class balancing" loading="lazy">
+      <figcaption>Illustrative, recall-first confusion matrix; false negatives are deliberately minimised because a missed at-risk case is the costliest error.</figcaption>
+    </figure>
+
+    <section class="section-narrow">
+      <h2>End-to-end lifecycle</h2>
+      <ol class="lifecycle">
+        <li><span class="lc-stage">Business Problem</span><p>Predict high-risk cases where a missed positive (false negative) carries the highest cost, the core shape of most enterprise risk problems.</p></li>
+        <li><span class="lc-stage">Business Context</span><p>A risk-screening scenario on imbalanced data, directly analogous to fraud detection, credit risk and high-value churn.</p></li>
+        <li><span class="lc-stage">Data Sources</span><p>A clinical risk dataset with significant class imbalance between positive and negative cases.</p></li>
+        <li><span class="lc-stage">Data Engineering / ETL</span><p>Cleaned columns, encoded categoricals, scaled numeric features and fixed potential leakage before modelling.</p></li>
+        <li><span class="lc-stage">Data Modeling</span><p>Reproducible stratified <strong>70/15/15</strong> split with fixed seeds; <strong>SMOTE</strong> oversampling applied only to the training set.</p></li>
+        <li><span class="lc-stage">Analytics &amp; Statistical Analysis</span><p>EDA, per-class metrics and confusion matrices, baselined against a majority-class predictor.</p></li>
+        <li><span class="lc-stage">Visualization &amp; Reporting</span><p>Confusion matrices and per-model comparisons to make the recall trade-off explicit.</p></li>
+        <li><span class="lc-stage">Machine Learning / AI</span><p>Benchmarked <strong>LR, SVM, k-NN, Decision Tree, Random Forest &amp; XGBoost</strong> with tuning; selected the recall/F1-optimal model (post-SMOTE k-NN).</p></li>
+        <li><span class="lc-stage">Business Impact</span><p>Minimised costly false negatives and produced a transferable, recall-first methodology for enterprise risk analytics.</p></li>
+        <li><span class="lc-stage">Lessons Learned</span><p>Optimise for the metric that matches the business cost, not raw accuracy; SMOTE plus threshold tuning is a reliable recipe for imbalance.</p></li>
+      </ol>
+    </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><p>© <span id="year"></span> Saurabh Lagad</p></div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

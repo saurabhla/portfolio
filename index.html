@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<!-- Preloader: Circular puzzle ring -->
+<div id="preloader" hidden class="preloader-ring" role="status" aria-live="polite">
+  <div class="pre-content">
+    <div class="ring-wrap" aria-hidden="true">
+      <svg class="puzzle-ring" viewBox="0 0 240 240" width="340" height="340">
+        <circle cx="120" cy="120" r="88" class="ring-bg"/>
+        <path class="arc arc-1" d="
+          M120,32
+          A88,88 0 0 1 208,120
+          q-12,-6 -20,4
+          q-6,9 -18,2
+          q-8,-6 -4,-18
+          q8,-18 -10,-20
+          A88,88 0 0 1 120,32Z"/>
+        <path class="arc arc-2" d="
+          M208,120
+          A88,88 0 0 1 120,208
+          q6,-12 -4,-20
+          q-9,-6 -2,-18
+          q6,-8 18,-4
+          q18,8 20,-10
+          A88,88 0 0 1 208,120Z"/>
+        <path class="arc arc-3" d="
+          M120,208
+          A88,88 0 0 1 32,120
+          q12,6 20,-4
+          q6,-9 18,-2
+          q8,6 4,18
+          q-8,18 10,20
+          A88,88 0 0 1 120,208Z"/>
+        <path class="arc arc-4" d="
+          M32,120
+          A88,88 0 0 1 120,32
+          q-6,12 4,20
+          q9,6 2,18
+          q-6,8 -18,4
+          q-18,-8 -20,10
+          A88,88 0 0 1 32,120Z"/>
+      </svg>
+      <div class="center-readout" id="loaderPercentage">0%</div>
+    </div>
+    <div class="loader-info">
+      <div id="loaderNote" class="note">Indexing datasets in Azure SQL…</div>
+    </div>
+  </div>
+</div>
+
+<head>
+  <script>
+  (function () {
+    try {
+      if (sessionStorage.getItem('preloader_seen_v1') === '1') {
+        document.documentElement.classList.add('skip-preloader');
+      }
+    } catch {}
+  })();
+</script>
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0e0f17">
+<script>
+  (function () {
+    try {
+      document.documentElement.setAttribute(
+        "data-theme",
+        localStorage.getItem("theme") || "dark"
+      );
+      if (sessionStorage.getItem("preloader_seen_v1") === "1") {
+        document.documentElement.classList.add("skip-preloader");
+      }
+    } catch {}
+  })();
+</script>
+<style>
+  html[data-theme="dark"] { background:#0e0f17; color-scheme: dark; }
+  .skip-preloader #preloader { display:none !important; }
+</style>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saurabh Lagad, End-to-End Data &amp; Analytics Professional</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Saurabh Lagad, Senior Business Intelligence Analyst & End-to-End Data Professional. Power BI, DAX, SQL, Python and ETL for executive and regulator reporting and data quality. Energy-sector BI across 150+ UK solar & grid sites (SCADA, Snowflake, forecasting), plus capital-project and programme reporting. Microsoft Fabric, Azure, data governance." />
+  <meta name="keywords" content="Senior Business Intelligence Analyst, BI Analyst, BI Developer, Data Analyst, Senior Data Analyst, Analytics Engineer, Data Engineer, Data Scientist, Power BI, DAX, Data Visualization, Data Storytelling, SQL, Python, ETL, Azure Data Factory, Microsoft Fabric, Snowflake, Boomi iPaaS, Data Warehousing, Data Lakes, Data Governance, Data Quality, Quality Assurance, Metadata Management, Energy, Utilities, Renewables, Solar, Grid, SCADA, Generation Forecasting, Energy Settlement, Capital Projects, CapEx, OpEx, Programme Reporting, Regulatory Reporting, PMO, Databricks, PySpark, Azure, Predictive Analytics" />
+  <meta name="author" content="Saurabh Lagad" />
+  <link rel="canonical" href="https://saurabhlagad.netlify.app/" />
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Saurabh Lagad, End-to-End Data & Analytics Professional" />
+  <meta property="og:description" content="I transform enterprise data into trusted business decisions through Data Engineering, Analytics, BI, Machine Learning and AI, across Pharma, Finance and Energy." />
+  <meta property="og:image" content="./assets/avatar.jpeg" />
+  <meta property="og:url" content="https://saurabhlagad.netlify.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Saurabh Lagad, End-to-End Data & Analytics Professional" />
+  <meta name="twitter:description" content="Data Engineering · Analytics · BI · Data Science · AI, turning enterprise data into measurable business outcomes." />
+  <meta name="twitter:image" content="./assets/avatar.jpeg" />
+
+  <!-- Favicon (inline SL badge) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%239a88ff'/%3E%3Cstop offset='1' stop-color='%23bfa8ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='32' font-weight='bold' fill='white' text-anchor='middle'%3ESL%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Decorative blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#">
+      <span class="brand-badge">SL</span>
+      <span class="brand-name">Saurabh Lagad</span>
+    </a>
+
+    <nav class="nav" id="primaryNav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#governance">Governance</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-social" aria-label="Social links">
+      <a class="sicon" href="mailto:saurabhlagad435@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+      </a>
+      <a class="sicon" href="https://www.linkedin.com/in/saurabh-lagad/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.84-2.05 3.8-2.05 4.06 0 4.8 2.67 4.8 6.14V23h-4v-6.58c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.53 1.72-2.53 3.49V23h-4V8z"/></svg>
+      </a>
+      <a class="sicon" href="https://github.com/saurabhla" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 .5A12 12 0 0 0 0 12.7c0 5.4 3.4 10 8.2 11.6.6.1.8-.3.8-.6v-2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.8.4-1.2.7-1.5-2.6-.3-5.4-1.4-5.4-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0C17 3.8 18 4 18 4c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .4.3.8.9.8 1.9v2.9c0 .3.2.7.8.6 4.8-1.6 8.2-6.2 8.2-11.6A12 12 0 0 0 12 .5Z"/></svg>
+      </a>
+    </div>
+
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle light or dark theme" title="Toggle theme">
+        <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0-5a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 17a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1ZM4.2 4.2a1 1 0 0 1 1.4 0l.7.7A1 1 0 1 1 4.9 6.3l-.7-.7a1 1 0 0 1 0-1.4Zm12.8 12.8a1 1 0 0 1 1.4 0l.7.7a1 1 0 1 1-1.4 1.4l-.7-.7a1 1 0 0 1 0-1.4ZM2 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Zm17 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1ZM4.9 17.7a1 1 0 0 1 0 1.4l-.7.7a1 1 0 0 1-1.4-1.4l.7-.7a1 1 0 0 1 1.4 0ZM17.7 4.9a1 1 0 0 1 0-1.4l.7-.7a1 1 0 1 1 1.4 1.4l-.7.7a1 1 0 0 1-1.4 0Z"/></svg>
+      </button>
+      <button id="navToggle" class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-left">
+        <span class="hero-eyebrow">End-to-End Data &amp; Analytics Professional</span>
+        <h1 class="hero-title">Turning enterprise data into <span class="accent">trusted decisions</span></h1>
+        <p class="subtitle">I'm Saurabh Lagad, I turn complex data into clear Power BI reporting and decisions for executives and regulators, with ~3 years across the full data lifecycle (BI, ETL, analytics &amp; data science), including energy analytics across <strong>150+ UK solar &amp; grid sites</strong>.</p>
+
+        <div class="chips">
+          <span class="chip">Business Intelligence</span>
+          <span class="chip">Data Engineering</span>
+          <span class="chip">Analytics Engineering</span>
+          <span class="chip">Data Science &amp; ML</span>
+          <span class="chip">AI &amp; GenAI</span>
+        </div>
+
+        <p class="availability">
+          <span class="avail-dot" aria-hidden="true"></span>
+          Open to Senior Data Analyst, BI Analyst &amp; Developer, Analytics Engineer &amp; Data Science roles · Dublin, Ireland · Eligible to work in Ireland (Stamp 1G) · Remote-friendly
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="./assets/Saurabh_Lagad_CV.pdf" download>Download Resume</a>
+          <a class="btn btn-ghost" href="#contact">Contact Me</a>
+        </div>
+
+        <div class="hero-metrics" aria-label="Career highlights">
+          <div class="metric"><span class="metric-num">3+ yrs</span><span class="metric-label">Energy, grid &amp; finance analytics</span></div>
+          <div class="metric"><span class="metric-num">150+</span><span class="metric-label">Solar &amp; grid sites analysed</span></div>
+          <div class="metric"><span class="metric-num">$200K+</span><span class="metric-label">Savings identified</span></div>
+          <div class="metric"><span class="metric-num">90%</span><span class="metric-label">Less manual reporting</span></div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <figure class="avatar-card" aria-label="Profile image">
+          <img class="avatar-img" src="./assets/avatar.jpeg" alt="Saurabh Lagad headshot">
+          <div class="avatar-fallback">SL</div>
+        </figure>
+        <a href="https://www.linkedin.com/in/saurabh-lagad/" class="cta-connect" target="_blank" rel="noopener" aria-label="Connect with Saurabh on LinkedIn">Let's connect</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section container">
+      <div class="section-head">
+        <h2>About Me</h2>
+        <p class="muted">Multidisciplinary data professional: business intelligence, engineering, analytics, science and AI under one roof.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>
+            I'm an <strong>End-to-End Data &amp; Analytics Professional</strong> with <strong>3+ years</strong> turning raw,
+            messy enterprise data into <strong>trusted business decisions</strong>. I take ownership across the whole
+            lifecycle, understanding the business problem, gathering stakeholder requirements, designing scalable data
+            solutions, building <strong>ETL/ELT pipelines</strong>, engineering analytical datasets, developing
+            <strong>executive dashboards</strong>, and applying <strong>statistics, machine learning and AI</strong> to
+            support strategic decisions.
+          </p>
+          <p>
+            My deepest experience is in the <strong>energy sector</strong>: I built BI and data-integration pipelines for a
+            major UK solar client across <strong>150+ solar and grid-infrastructure sites</strong>, ingesting SCADA, inverter
+            and grid-export data into a <strong>Snowflake</strong> warehouse and surfacing capacity-factor, curtailment and
+            grid-export KPIs, forecasting and anomalies, work that helped identify <strong>$200K+ in savings</strong>.
+            Alongside that I deliver <strong>Power BI report suites</strong> for operations, finance and marketing leadership
+            within <strong>structured governance and programme reporting cycles</strong>, with data integrity, quality
+            assurance and clear reporting to <strong>executives and regulators</strong> always front of mind. I think in terms
+            of <em>business problem → solution → measurable outcome</em>, not tools.
+          </p>
+          <p>
+            Right now I'm deepening <strong>AI &amp; Generative AI</strong> (LLMs, RAG, AI-assisted analytics),
+            <strong>Databricks</strong>, <strong>PySpark</strong>, <strong>data lakes</strong> and modern
+            <strong>lakehouse</strong> platforms, including <strong>Microsoft Fabric</strong>, building toward
+            analytics-engineering and data-science depth on enterprise-scale data. Curious by default, consulting-minded,
+            outcome-focused.
+          </p>
+        </div>
+        <aside class="about-side">
+          <h3>At a glance</h3>
+          <ul class="check">
+            <li>Full data lifecycle ownership</li>
+            <li>Energy, capital projects &amp; regulated domains</li>
+            <li>Reporting for execs, auditors &amp; regulators</li>
+            <li>Technical + business stakeholder fluent</li>
+            <li>First-Class MSc (UCD) · SCOPUS-published</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+        <hr class="divider divider-purple" aria-hidden="true">
+
+    <!-- Core Expertise -->
+    <section id="expertise" class="section container">
+      <div class="section-head">
+        <h2>Core Expertise</h2>
+        <p class="muted">Connected capabilities that let me own a problem from raw data to business outcome, led by business intelligence.</p>
+      </div>
+      <div class="expertise-grid">
+        <article class="exp-card">
+          <span class="exp-ic" aria-hidden="true">📊</span>
+          <h3>Business Intelligence</h3>
+          <p class="exp-lead">Decisions, not just dashboards.</p>
+          <ul class="check">
+            <li>Executive dashboards &amp; KPI scorecards</li>
+            <li>Translate complex data into clear, actionable visuals</li>
+            <li>Reporting &amp; storytelling for executives &amp; regulators</li>
+            <li>Capital project (CapEx/OpEx) &amp; programme reporting</li>
+            <li><strong>Advanced</strong> Power BI, DAX &amp; data visualization</li>
+          </ul>
+        </article>
+        <article class="exp-card">
+          <span class="exp-ic" aria-hidden="true">🏗️</span>
+          <h3>Data Engineering</h3>
+          <p class="exp-lead">Reliable pipelines and trusted foundations.</p>
+          <ul class="check">
+            <li>ETL/ELT pipelines across cloud &amp; on-prem</li>
+            <li>Structured &amp; semi-structured data integration</li>
+            <li>Data warehousing, data lakes &amp; data modeling</li>
+            <li>Data transformation, cleansing &amp; SQL optimisation</li>
+            <li>Reporting &amp; workflow automation</li>
+            <li>SQL · Python · Azure Data Factory · Microsoft Fabric · SAP · Salesforce</li>
+          </ul>
+        </article>
+        <article class="exp-card">
+          <span class="exp-ic" aria-hidden="true">🧩</span>
+          <h3>Analytics Engineering</h3>
+          <p class="exp-lead">Raw data into reliable analytical assets.</p>
+          <ul class="check">
+            <li>Business-ready datasets &amp; semantic layers</li>
+            <li>KPI frameworks &amp; metrics design</li>
+            <li>Modular SQL transformations (dbt-style)</li>
+            <li>Self-service analytics enablement</li>
+            <li>Trusted, documented reporting foundations</li>
+          </ul>
+        </article>
+        <article class="exp-card">
+          <span class="exp-ic" aria-hidden="true">🧠</span>
+          <h3>Data Science &amp; ML</h3>
+          <p class="exp-lead">Advanced analytics for real business problems.</p>
+          <ul class="check">
+            <li>Statistics, hypothesis testing &amp; EDA</li>
+            <li>Classification, regression &amp; predictive analytics</li>
+            <li>Feature engineering &amp; model evaluation</li>
+            <li>Customer, risk &amp; forecasting analytics</li>
+            <li>NLP &amp; published research (SCOPUS)</li>
+          </ul>
+        </article>
+        <article class="exp-card exp-ai">
+          <span class="exp-ic" aria-hidden="true">🤖</span>
+          <h3>AI &amp; Generative AI</h3>
+          <p class="exp-lead">Practical AI today, exploring the frontier.</p>
+          <ul class="check">
+            <li><strong>Delivered:</strong> AI-assisted data-validation pipeline (Claude Code)</li>
+            <li><strong>Delivered:</strong> NLP classifier, SCOPUS-published</li>
+            <li>AI workflow automation &amp; prompt engineering</li>
+            <li><em>Exploring:</em> LLMs &amp; Retrieval-Augmented Generation (RAG)</li>
+            <li><em>Exploring:</em> conversational analytics &amp; document processing</li>
+          </ul>
+        </article>
+        <article class="exp-card">
+          <span class="exp-ic" aria-hidden="true">🤝</span>
+          <h3>Consulting &amp; Delivery</h3>
+          <p class="exp-lead">Business problems to owned solutions.</p>
+          <ul class="check">
+            <li>Requirement gathering &amp; stakeholder management</li>
+            <li>Executive communication &amp; data storytelling</li>
+            <li>Solution design &amp; project ownership</li>
+            <li>Translating business needs into technical builds</li>
+            <li>Cross-functional, end-to-end delivery</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+        <hr class="divider divider-purple" aria-hidden="true">
+
+    <!-- Industry & Domain -->
+    <section id="industries" class="section container">
+      <div class="section-head">
+        <h2>Industry &amp; Domain Expertise</h2>
+        <p class="muted">Business understanding across energy, capital-project, regulated and financial environments.</p>
+      </div>
+      <div class="domain-grid">
+        <article class="domain-card">
+          <h3>⚡ Energy, Renewables &amp; Grid</h3>
+          <p>BI and data engineering for a major <strong>UK solar client across 150+ solar &amp; grid sites</strong>, tracking
+          <strong>capacity factor, energy yield, curtailment and grid-export</strong>; ingesting SCADA/inverter telemetry into
+          Snowflake and <strong>forecasting generation &amp; demand</strong> to support grid dispatch and energy settlement,
+          work that identified <strong>$200K+ in savings</strong>.</p>
+          <div class="chips">
+            <span class="chip">150+ PV / Grid Sites</span><span class="chip">SCADA &amp; Telemetry</span><span class="chip">Capacity Factor &amp; Curtailment</span><span class="chip">Generation Forecasting</span>
+          </div>
+        </article>
+        <article class="domain-card">
+          <h3>🖥️ Regulated SaaS &amp; Multi-Client BI</h3>
+          <p>Business intelligence and report suites across <strong>20+ client portfolios</strong> on a regulated platform,
+          covering operations, marketing and financial reporting, delivered with <strong>data integrity, quality assurance
+          and audit-readiness</strong> within structured governance cycles.</p>
+          <div class="chips">
+            <span class="chip">20+ Client Portfolios</span><span class="chip">Operations &amp; Financial Reporting</span><span class="chip">Quality Assurance</span><span class="chip">Governance Cycles</span>
+          </div>
+        </article>
+        <article class="domain-card">
+          <h3>💼 Financial Services</h3>
+          <p>HR &amp; finance <strong>performance measurement</strong>, revenue/cost reporting, KPI/KRI monitoring, variance
+          detection and forecasting support that gives leaders a trusted view of the numbers.</p>
+          <div class="chips">
+            <span class="chip">Financial Reporting</span><span class="chip">KPI / KRI Monitoring</span><span class="chip">Forecasting</span><span class="chip">Performance Analytics</span>
+          </div>
+        </article>
+        <article class="domain-card">
+          <h3>🛡️ Regulated &amp; Governed Data</h3>
+          <p>Comfortable with <strong>enterprise accountability</strong>, data governance, lineage, validation, controlled
+          processes and audit compliance, so insights stay trusted and defensible for <strong>executives, auditors and
+          regulators</strong> (regulatory and government-grade reporting).</p>
+          <div class="chips">
+            <span class="chip">Data Governance</span><span class="chip">Data Lineage</span><span class="chip">Validation</span><span class="chip">Regulator &amp; Audit Reporting</span>
+          </div>
+        </article>
+      </div>
+    </section>
+        <hr class="divider divider-purple" aria-hidden="true">
+
+    <!-- Data Quality & Governance -->
+    <section id="governance" class="section container">
+      <div class="section-head">
+        <h2>Data Quality &amp; Governance</h2>
+        <p class="muted">Trusted data isn't an accident, I build validation, documentation and governance into the flow.</p>
+      </div>
+
+      <figure class="project-figure">
+        <img src="./assets/fig-dataflow.svg" alt="Data flow from source systems through ETL, validation and QA, modeling and governance to Power BI" loading="lazy">
+      </figure>
+
+      <div class="domain-grid">
+        <article class="domain-card">
+          <h3>✅ Data Validation &amp; QA</h3>
+          <p>Automated <strong>data validation</strong> and quality-assurance checks against business rules keep reporting <strong>accurate and consistent</strong>, including an AI-assisted validation pipeline that standardises checks across datasets.</p>
+          <div class="chips"><span class="chip">Quality Assurance</span><span class="chip">Validation Rules</span><span class="chip">Accuracy &amp; Consistency</span></div>
+        </article>
+        <article class="domain-card">
+          <h3>🗂️ Metadata Management</h3>
+          <p>Clear <strong>definitions, data dictionaries and metadata</strong> so datasets are understood, discoverable and trusted across business and IT teams.</p>
+          <div class="chips"><span class="chip">Metadata Management</span><span class="chip">Data Dictionaries</span><span class="chip">Cataloguing</span></div>
+        </article>
+        <article class="domain-card">
+          <h3>📑 Documentation &amp; Data Flows</h3>
+          <p>Documented <strong>data flows and pipelines</strong>, sources → transformations → outputs, for maintainability, onboarding and audit, the way the warehouse project was built.</p>
+          <div class="chips"><span class="chip">Data-Flow Documentation</span><span class="chip">Pipeline Mapping</span><span class="chip">Maintainability</span></div>
+        </article>
+        <article class="domain-card">
+          <h3>🛡️ Governance &amp; Lineage</h3>
+          <p>Controlled, auditable processes with <strong>data lineage and governance</strong> so insights stay trustworthy and defensible in regulated environments.</p>
+          <div class="chips"><span class="chip">Data Governance</span><span class="chip">Data Lineage</span><span class="chip">Business Process Change</span></div>
+        </article>
+      </div>
+    </section>
+        <hr class="divider divider-purple" aria-hidden="true">
+
+    <!-- Professional Experience -->
+    <section id="experience" class="section container">
+      <div class="section-head">
+        <h2>Professional Experience</h2>
+        <p class="muted">Framed as business challenge → responsibilities → solution → measurable outcome.</p>
+      </div>
+
+      <article class="xp-card">
+        <div class="xp-head">
+          <div>
+            <h3>Business Intelligence Analyst · Biologit</h3>
+            <span class="xp-meta">Data Operations Associate · Regulated platform · Remote – Ireland</span>
+          </div>
+          <span class="xp-date">Apr 2025 – Present</span>
+        </div>
+        <div class="xp-flow">
+          <div class="xp-step"><span class="xp-label">Challenge</span><p>Leadership across operations, marketing and finance lacked timely, consistent visibility into platform-wide performance across <strong>20+ client portfolios</strong>.</p></div>
+          <div class="xp-step"><span class="xp-label">Responsibilities</span><p>Translated requirements from operations, finance and marketing stakeholders into BI, and presented KPI updates and executive insights to leadership within <strong>structured governance and programme reporting cycles</strong>.</p></div>
+          <div class="xp-step"><span class="xp-label">Solution</span><p>Led <strong>3+ enterprise report suites</strong> (operations, marketing, financial); built <strong>5+ Power BI dashboards</strong> with advanced <strong>DAX</strong> tracking <strong>15+ KPIs</strong> across 20+ portfolios; gathered, cleaned and validated multi-source data in <strong>Python (Pandas, NumPy)</strong> with data-quality checks.</p></div>
+          <div class="xp-step"><span class="xp-label">Outcome</span><p>Gave leadership timely, actionable insight; improved pipeline reliability and cut manual data-prep effort by <strong>~90%</strong>; surfaced trends and anomalies that drove measurable operational-efficiency gains.</p></div>
+        </div>
+      </article>
+
+      <article class="xp-card">
+        <div class="xp-head">
+          <div>
+            <h3>Data Analytics / BI Engineer · OnePoint IT Consultancy</h3>
+            <span class="xp-meta">Associate Data Engineer · Energy / Solar &amp; Grid (UK client) · Hybrid – India</span>
+          </div>
+          <span class="xp-date">Nov 2022 – Aug 2024</span>
+        </div>
+        <div class="xp-flow">
+          <div class="xp-step"><span class="xp-label">Challenge</span><p>A major UK solar client needed self-service visibility into generation performance across <strong>150+ PV and grid-infrastructure sites</strong>; siloed SCADA, inverter and grid-export data slowed root-cause analysis and grid-dispatch planning.</p></div>
+          <div class="xp-step"><span class="xp-label">Responsibilities</span><p>Owned BI and data integration for the client's energy portfolio; partnered with <strong>Finance and operations leadership</strong>; standardised KPI definitions and <strong>metadata management</strong> portfolio-wide.</p></div>
+          <div class="xp-step"><span class="xp-label">Solution</span><p>Built <strong>Power BI</strong> dashboards (advanced <strong>DAX</strong>) tracking capacity factor, energy yield, curtailment and grid-export across <strong>150+ sites</strong>; ingested SCADA telemetry, inverter logs and semi-structured grid data via <strong>Azure Data Factory, Microsoft Fabric, Python and Boomi iPaaS</strong> into a <strong>Snowflake</strong> warehouse + data lake (raw→staging→analytical) across cloud and on-prem; applied <strong>time-series and regression forecasting</strong> for generation and demand.</p></div>
+          <div class="xp-step"><span class="xp-label">Outcome</span><p>Gave O&amp;M teams self-service generation insight, accelerated root-cause analysis, improved energy-settlement forecast reliability, and identified inefficiencies delivering <strong>$200K+ in quantifiable savings</strong>.</p></div>
+        </div>
+      </article>
+    </section>
+        <hr class="divider divider-purple" aria-hidden="true">
+
+    <!-- Featured Projects -->
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <h2>Featured Projects</h2>
+        <p class="muted">End-to-end work across business intelligence, data engineering, analytics and AI. Filter by capability.</p>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Filter projects by capability">
+        <button class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="bi" aria-pressed="false">BI &amp; Analytics</button>
+        <button class="filter-btn" data-filter="de" aria-pressed="false">Data Engineering</button>
+        <button class="filter-btn" data-filter="ds" aria-pressed="false">Data Science</button>
+        <button class="filter-btn" data-filter="ai" aria-pressed="false">AI &amp; Automation</button>
+      </div>
+
+      <div class="cards">
+        <!-- BI -->
+        <article class="card project" data-category="bi">
+          <div class="project-media">
+            <a href="./projects/qcommerce.html" rel="noopener"><img src="./assets/qcommerce.jpeg" alt="Interactive Q-Commerce dashboard" loading="lazy"></a>
+          </div>
+          <div class="project-body">
+            <h3>Q-Commerce Executive Dashboard</h3>
+            <p>Executive <strong>Power BI</strong> dashboard turning sales, product and customer data into clear decisions, real-time KPIs guiding a projected <strong>15%</strong> sales uplift.</p>
+            <ul class="tags"><li>Power BI</li><li>DAX</li><li>Data Modeling</li><li>Storytelling</li></ul>
+            <div class="card-links">
+              <a class="btn btn-small btn-cta" href="./projects/qcommerce.html" rel="noopener"><span>Case study</span></a>
+              <a class="gh-link" href="https://github.com/saurabhla/power-bi-blinkit-report" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Data Engineering -->
+        <article class="card project" data-category="de">
+          <div class="project-media">
+            <a href="./projects/dwh.html" rel="noopener"><img src="./assets/dwh.jpeg" alt="SQL Data Warehouse & Analytics, medallion architecture" loading="lazy"></a>
+          </div>
+          <div class="project-body">
+            <h3>SQL Data Warehouse &amp; Analytics</h3>
+            <p>Medallion <strong>data warehouse</strong> (Bronze→Silver→Gold) ingesting ERP/CRM/Excel via reliable <strong>ETL</strong>, serving business-ready <strong>star schemas</strong> for BI, ad-hoc SQL and ML.</p>
+            <ul class="tags"><li>SQL Server</li><li>ETL</li><li>Data Modeling</li><li>Medallion</li></ul>
+            <div class="card-links">
+              <a class="btn btn-small btn-cta" href="./projects/dwh.html" rel="noopener"><span>Case study</span></a>
+              <a class="gh-link" href="https://github.com/saurabhla/sql-data-warehouse-project" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- AI -->
+        <article class="card project" data-category="ai">
+          <div class="project-media">
+            <a href="./projects/ai-validation-pipeline.html" rel="noopener"><img src="./assets/ai-pipeline.svg" alt="AI-accelerated data validation pipeline" loading="lazy"></a>
+          </div>
+          <div class="project-body">
+            <h3>AI-Accelerated Data Validation</h3>
+            <p>End-to-end validation pipeline built with <strong>Claude Code</strong>, profiles Excel against <strong>JSON business rules</strong>, validates and reports with human checkpoints, cutting manual prep to near zero.</p>
+            <ul class="tags"><li>Python</li><li>AI / LLM</li><li>Automation</li><li>Data Quality</li></ul>
+            <div class="card-links">
+              <a class="btn btn-small btn-cta" href="./projects/ai-validation-pipeline.html" rel="noopener"><span>Case study</span></a>
+              <a class="gh-link" href="https://github.com/saurabhla/AI-Accelerated-Data-Validation" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Data Science: risk -->
+        <article class="card project" data-category="ds">
+          <div class="project-media">
+            <a href="./projects/heart-attack.html" rel="noopener"><img src="./assets/heart-attack.jpeg" alt="Heart attack risk prediction" loading="lazy"></a>
+          </div>
+          <div class="project-body">
+            <h3>Risk Prediction (Imbalanced ML)</h3>
+            <p>Recall-first <strong>risk model</strong> on imbalanced data,<strong>SMOTE</strong> balancing and benchmarking across LR, SVM, k-NN, Random Forest &amp; XGBoost to minimise costly false negatives.</p>
+            <ul class="tags"><li>Python</li><li>scikit-learn</li><li>SMOTE</li><li>Risk Analytics</li></ul>
+            <div class="card-links">
+              <a class="btn btn-small btn-cta" href="./projects/heart-attack.html" rel="noopener"><span>Case study</span></a>
+              <a class="gh-link" href="https://github.com/saurabhla/heart-attack-risk-prediction" target="_blank" rel="noopener" aria-label="GitHub repository">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="projects-foot muted">More on <a href="https://github.com/saurabhla" target="_blank" rel="noopener">GitHub →</a></p>
+    </section>
+        <hr class="divider divider-purple" aria-hidden="true">
+
+    <!-- Technical Skills -->
+    <section id="skills" class="section container">
+      <div class="section-head">
+        <h2>Technical Skills</h2>
+        <p class="muted">Depth where it counts, organised the way teams actually build.</p>
+      </div>
+
+      <div class="skills-wrap">
+        <div class="skill-bars">
+          <div class="skill"><div class="skill-top"><span class="skill-name">Power BI &amp; DAX <span class="skill-note">· dashboards, data models, storytelling</span></span><span class="skill-pct">95%</span></div><div class="skill-track"><span class="skill-fill" style="--lvl:95%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span class="skill-name">SQL <span class="skill-note">· modelling, window functions, tuning</span></span><span class="skill-pct">90%</span></div><div class="skill-track"><span class="skill-fill" style="--lvl:90%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span class="skill-name">ETL / Data Engineering <span class="skill-note">· pipelines, warehousing</span></span><span class="skill-pct">82%</span></div><div class="skill-track"><span class="skill-fill" style="--lvl:82%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span class="skill-name">Python <span class="skill-note">· pandas, scikit-learn, NLP</span></span><span class="skill-pct">82%</span></div><div class="skill-track"><span class="skill-fill" style="--lvl:82%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span class="skill-name">Statistics &amp; ML <span class="skill-note">· testing, modelling, evaluation</span></span><span class="skill-pct">78%</span></div><div class="skill-track"><span class="skill-fill" style="--lvl:78%"></span></div></div>
+          <div class="skill"><div class="skill-top"><span class="skill-name">Cloud &amp; AI <span class="skill-note">· Azure, Fabric, Databricks, LLMs (learning)</span></span><span class="skill-pct">65%</span></div><div class="skill-track"><span class="skill-fill" style="--lvl:65%"></span></div></div>
+        </div>
+
+        <div class="skill-groups">
+          <article class="skill-group"><h3>📊 Analytics &amp; BI</h3><div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">KPI Design</span><span class="chip">Data Visualization</span><span class="chip">Data Storytelling</span><span class="chip">Excel / Power Query</span><span class="chip">Tableau</span></div></article>
+          <article class="skill-group"><h3>🧮 Programming &amp; Query</h3><div class="chips"><span class="chip">SQL</span><span class="chip">Python</span><span class="chip">R</span><span class="chip">DAX</span></div></article>
+          <article class="skill-group"><h3>🏗️ Data Engineering</h3><div class="chips"><span class="chip">ETL / ELT</span><span class="chip">Data Modeling</span><span class="chip">Data Warehousing</span><span class="chip">Data Quality &amp; QA</span><span class="chip">Data Validation</span><span class="chip">Metadata Management</span><span class="chip">SSIS</span></div></article>
+          <article class="skill-group"><h3>🧠 Data Science</h3><div class="chips"><span class="chip">Statistics</span><span class="chip">Forecasting (Time-Series)</span><span class="chip">Anomaly Detection</span><span class="chip">Regression</span><span class="chip">Machine Learning</span><span class="chip">Predictive Analytics</span><span class="chip">NLP</span></div></article>
+          <article class="skill-group"><h3>☁️ Cloud &amp; Modern Data</h3><div class="chips"><span class="chip">Azure Data Factory</span><span class="chip">Microsoft Fabric</span><span class="chip">Databricks</span><span class="chip">PySpark</span><span class="chip">Data Lakes</span><span class="chip">Lakehouse</span><span class="chip">Snowflake</span></div></article>
+          <article class="skill-group"><h3>🤖 AI &amp; Emerging Tech</h3><div class="chips"><span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">Prompt Engineering</span><span class="chip">AI Applications</span><span class="chip">Claude Code</span></div></article>
+          <article class="skill-group"><h3>🏢 Enterprise Systems</h3><div class="chips"><span class="chip">SAP</span><span class="chip">IFS ERP</span><span class="chip">Salesforce</span><span class="chip">Boomi iPaaS</span><span class="chip">Power Automate</span><span class="chip">REST APIs</span><span class="chip">Git / Jira / Azure Boards</span></div></article>
+        </div>
+      </div>
+    </section>
+        <hr class="divider divider-purple" aria-hidden="true">
+
+    <!-- Business Impact -->
+    <section id="impact" class="section container">
+      <div class="section-head">
+        <h2>Business Impact</h2>
+        <p class="muted">Outcomes over output, what the work actually changed for the business.</p>
+      </div>
+      <div class="impact-stats">
+        <div class="impact-stat"><span class="impact-num">$200K+</span><span class="impact-lbl">Savings identified (UK solar)</span></div>
+        <div class="impact-stat"><span class="impact-num">150+</span><span class="impact-lbl">Solar &amp; grid sites analysed</span></div>
+        <div class="impact-stat"><span class="impact-num">90%</span><span class="impact-lbl">Less manual data-prep</span></div>
+        <div class="impact-stat"><span class="impact-num">15+</span><span class="impact-lbl">KPIs tracked in Power BI</span></div>
+        <div class="impact-stat"><span class="impact-num">20+</span><span class="impact-lbl">Client portfolios reported</span></div>
+        <div class="impact-stat"><span class="impact-num">5+</span><span class="impact-lbl">Power BI dashboards delivered</span></div>
+      </div>
+      <ul class="check impact-list">
+        <li>Accelerated decision-making and improved visibility into operational KPIs for senior stakeholders.</li>
+        <li>Automated repetitive reporting and validation, freeing analysts for higher-value work.</li>
+        <li>Led business-process-change and reporting-standardisation initiatives that improved data management and quality assurance.</li>
+        <li>Increased stakeholder confidence in data through quality monitoring and audit-ready reporting.</li>
+        <li>Enabled proactive, exception-based monitoring instead of reactive, manual checks.</li>
+      </ul>
+    </section>
+        <hr class="divider divider-purple" aria-hidden="true">
+
+    <!-- Stakeholder & Consulting -->
+    <section id="consulting" class="section container">
+      <div class="section-head">
+        <h2>Stakeholder &amp; Consulting Capabilities</h2>
+        <p class="muted">The non-code skills that turn analysis into adopted decisions.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card pad-card">
+          <h3>Discovery &amp; Requirements</h3>
+          <ul class="check">
+            <li>Requirement gathering &amp; scoping</li>
+            <li>Business process understanding</li>
+            <li>Translating needs into solutions</li>
+          </ul>
+        </article>
+        <article class="card pad-card">
+          <h3>Stakeholder Engagement</h3>
+          <ul class="check">
+            <li>Stakeholder &amp; expectation management</li>
+            <li>Executive &amp; cross-functional communication</li>
+            <li>Data storytelling for decisions</li>
+          </ul>
+        </article>
+        <article class="card pad-card">
+          <h3>Solution &amp; Delivery</h3>
+          <ul class="check">
+            <li>Solution design thinking</li>
+            <li>Analytical problem solving</li>
+            <li>Project ownership end-to-end</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+        <hr class="divider divider-purple" aria-hidden="true">
+
+    <!-- Certifications & Learning -->
+    <section id="learning" class="section container">
+      <div class="section-head">
+        <h2>Education, Certifications &amp; Continuous Learning</h2>
+        <p class="muted">Formal foundations plus a deliberate path toward analytics-engineering and AI depth.</p>
+      </div>
+
+      <div class="edu-grid">
+        <article class="edu-card">
+          <div class="edu-head">
+            <h3 class="edu-title">MSc in Information Systems</h3>
+            <span class="edu-org">University College Dublin, Ireland</span>
+            <span class="edu-meta">Grade: <strong>1:1 (First Class with Distinction)</strong></span>
+          </div>
+          <ul class="t-bullets">
+            <li>Modules: Machine Learning, AI Ethics, Data Analytics, Business Intelligence, Database Management.</li>
+            <li>Applied projects across SQL, Python, R and machine learning.</li>
+          </ul>
+        </article>
+        <article class="edu-card">
+          <div class="edu-head">
+            <h3 class="edu-title">B.E. in Information Technology</h3>
+            <span class="edu-org">PVG's COET, Pune, India</span>
+            <span class="edu-meta">CGPA: <strong>9.47/10 (First Class with Distinction)</strong></span>
+          </div>
+          <ul class="t-bullets">
+            <li>Modules: Machine Learning, Cloud Computing, Data Warehousing, Algorithms, Data Structures.</li>
+            <li>Strong computer-science and data foundations.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="creds-strip" aria-label="Credentials">
+        <div class="cred"><span class="cred-ic" aria-hidden="true">📄</span><div><strong>SCOPUS-indexed publication</strong><span>Peer-reviewed NLP fake-review research</span></div></div>
+        <div class="cred"><span class="cred-ic" aria-hidden="true">🎓</span><div><strong>First-Class MSc, 1:1</strong><span>Information Systems, UCD</span></div></div>
+        <div class="cred"><span class="cred-ic" aria-hidden="true">📊</span><div><strong>Microsoft PL-300</strong><span>Power BI Data Analyst · in progress</span></div></div>
+      </div>
+
+      <div class="learn-now">
+        <h3>Actively learning</h3>
+        <div class="chips">
+          <span class="chip">Microsoft Fabric</span><span class="chip">dbt</span><span class="chip">AI &amp; Generative AI</span><span class="chip">LLMs &amp; RAG</span><span class="chip">Databricks</span>
+          <span class="chip">PySpark</span><span class="chip">Data Lakes</span><span class="chip">Azure Data Engineering</span><span class="chip">Advanced ML</span><span class="chip">MLOps</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ <footer class="site-footer" id="contact">
+  <div class="footer-cards">
+  <!-- Email -->
+  <a class="contact-card email" href="mailto:saurabhlagad435@gmail.com" aria-label="Email Saurabh">
+    <span class="i" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+    </span>
+    <div class="t">
+      <span class="k">Email</span>
+      <span class="v">saurabhlagad435@gmail.com</span>
+    </div>
+  </a>
+
+  <!-- LinkedIn -->
+  <a class="contact-card linkedin" href="https://www.linkedin.com/in/saurabh-lagad/" target="_blank" rel="noopener" aria-label="Open LinkedIn profile">
+    <span class="i" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4v15h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.84-2.05 3.8-2.05 4.06 0 4.8 2.67 4.8 6.14V23h-4v-6.58c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.53 1.72-2.53 3.49V23h-4V8z"/></svg>
+    </span>
+    <div class="t">
+      <span class="k">LinkedIn</span>
+      <span class="v">linkedin.com/in/saurabh-lagad</span>
+    </div>
+  </a>
+
+  <!-- GitHub -->
+  <a class="contact-card github" href="https://github.com/saurabhla" target="_blank" rel="noopener" aria-label="Open GitHub profile">
+    <span class="i" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 .5A12 12 0 0 0 0 12.7c0 5.4 3.4 10 8.2 11.6.6.1.8-.3.8-.6v-2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.8.4-1.2.7-1.5-2.6-.3-5.4-1.4-5.4-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0S17 3.8 18 4c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .4.3.8.9.8 1.9v2c0 .3.2.8.8.6C20.6 22.7 24 18.1 24 12.7A12 12 0 0 0 12 .5Z"/></svg>
+    </span>
+    <div class="t">
+      <span class="k">GitHub</span>
+      <span class="v">github.com/saurabhla</span>
+    </div>
+  </a>
+</div>
+
+</footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0e0f17">
+<script>
+  (function () {
+    try {
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+      if (sessionStorage.getItem("preloader_seen_v1") === "1") { document.documentElement.classList.add("skip-preloader"); }
+    } catch {}
+  })();
+</script>
+<style>
+  html[data-theme="dark"] { background:#0e0f17; color-scheme: dark; }
+  .skip-preloader #preloader { display:none !important; }
+</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Q-Commerce Executive Dashboard, Case Study</title>
+  <meta name="description" content="An executive Power BI dashboard turning sales, product and customer data into real-time KPIs and clear decisions, guiding a projected 15% sales uplift." />
+  <link href="../style.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-badge">SL</span></a>
+      <nav class="nav"><a href="../index.html#projects">← Back to Projects</a></nav>
+    </div>
+  </header>
+
+  <main class="container"><div class="proj-wrap wide">
+    <section class="project-hero">
+      <span class="proj-tag-line">Business Intelligence · Executive Reporting</span>
+      <h1 class="project-title">Q-Commerce Executive Dashboard</h1>
+      <p class="project-sub">
+        An executive <strong>Power BI</strong> dashboard that gives leaders a single, real-time view of sales, product and
+        customer performance, built for decisions, not decoration, and guiding a projected <strong>15% sales uplift</strong>.
+      </p>
+      <div class="meta">
+        <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span>
+        <span class="tag">Data Modeling</span><span class="tag">Data Storytelling</span>
+      </div>
+      <div class="links">
+        <a class="btn btn-primary" href="https://github.com/saurabhla/power-bi-blinkit-report" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="dwh.html" rel="noopener">NEXT</a>
+      </div>
+    </section>
+
+    <figure class="project-figure">
+      <img src="../assets/fig-qcommerce.svg" alt="Q-commerce Power BI dashboard layout with KPI tiles, bar chart and donut" loading="lazy">
+      <figcaption>Illustrative, dashboard layout: KPI tiles, sales-by-outlet bar chart, and an outlet-size composition donut, all cross-filtered.</figcaption>
+    </figure>
+
+    <section class="section-narrow">
+      <h2>End-to-end lifecycle</h2>
+      <ol class="lifecycle">
+        <li><span class="lc-stage">Business Problem</span><p>Leaders lacked a single, trustworthy view of performance, sales, products and customers lived in separate spreadsheets, slowing decisions.</p></li>
+        <li><span class="lc-stage">Business Context</span><p>A quick-commerce business where margins are thin and speed of decision-making is a competitive advantage.</p></li>
+        <li><span class="lc-stage">Data Sources</span><p>Sales/transaction, product and outlet data supplied as Excel/CSV extracts.</p></li>
+        <li><span class="lc-stage">Data Engineering / ETL</span><p>Cleaned and shaped the data with <strong>Power Query</strong>, resolving inconsistencies and building a refreshable model.</p></li>
+        <li><span class="lc-stage">Data Modeling</span><p>A star-schema-style model with <strong>DAX</strong> measures (Total/Avg Sales, Items, Avg Rating) for fast, consistent metrics.</p></li>
+        <li><span class="lc-stage">Analytics &amp; Statistical Analysis</span><p>Trend, composition and ranking analysis across outlet types, sizes and item categories.</p></li>
+        <li><span class="lc-stage">Visualization &amp; Reporting</span><p>An interactive dashboard, KPI tiles, a metric switcher, cross-filtering and conditional-formatting tables, designed for executive readability.</p></li>
+        <li><span class="lc-stage">Machine Learning / AI</span><p>Not in scope, a focused BI build, with the warehouse and ML projects covering that ground.</p></li>
+        <li><span class="lc-stage">Business Impact</span><p>Real-time tracking of 10+ KPIs that supported clearer, faster decisions and a projected <strong>15% sales uplift</strong>.</p></li>
+        <li><span class="lc-stage">Lessons Learned</span><p>Layout and interactivity drive adoption as much as the data does; a clear "so what?" beats adding more charts.</p></li>
+      </ol>
+    </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><p>© <span id="year"></span> Saurabh Lagad</p></div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

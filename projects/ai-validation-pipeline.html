@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0e0f17">
+<script>
+  (function () {
+    try {
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+      if (sessionStorage.getItem("preloader_seen_v1") === "1") { document.documentElement.classList.add("skip-preloader"); }
+    } catch {}
+  })();
+</script>
+<style>
+  html[data-theme="dark"] { background:#0e0f17; color-scheme: dark; }
+  .skip-preloader #preloader { display:none !important; }
+</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI-Accelerated Data Validation Pipeline, Case Study</title>
+  <meta name="description" content="An LLM-assisted, end-to-end data cleaning and validation pipeline built with Claude Code, profiles Excel against JSON business rules, validates and reports with human-in-the-loop checkpoints." />
+  <link href="../style.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html"><span class="brand-badge">SL</span></a>
+      <nav class="nav"><a href="../index.html#projects">← Back to Projects</a></nav>
+    </div>
+  </header>
+
+  <main class="container"><div class="proj-wrap wide">
+    <section class="project-hero">
+      <span class="proj-tag-line">AI &amp; Automation · Data Quality</span>
+      <h1 class="project-title">AI-Accelerated Data Validation Pipeline</h1>
+      <p class="project-sub">
+        An <strong>LLM-assisted</strong>, end-to-end cleaning and validation pipeline built with <strong>Claude Code</strong> that
+        standardises data quality across datasets, profiling an Excel file against <strong>JSON business rules</strong>, then
+        validating, transforming and reporting with a <strong>human checkpoint before any change</strong>.
+      </p>
+      <div class="meta">
+        <span class="tag">Python</span><span class="tag">AI / LLM</span><span class="tag">Claude Code</span>
+        <span class="tag">Automation</span><span class="tag">Data Quality</span><span class="tag">JSON Rules</span>
+      </div>
+      <div class="links">
+        <a class="btn btn-primary" href="https://github.com/saurabhla/AI-Accelerated-Data-Validation" target="_blank" rel="noopener">GitHub Repo</a>
+        <a class="btn" href="heart-attack.html" rel="noopener">NEXT</a>
+      </div>
+    </section>
+
+    <figure class="project-figure">
+      <img src="../assets/fig-pipeline.svg" alt="Five-stage validation pipeline with a human confirmation checkpoint" loading="lazy">
+      <figcaption>The pipeline: Excel in, profile, validate against JSON rules, confirm each change (human-in-the-loop), then output a clean report.</figcaption>
+    </figure>
+
+    <section class="section-narrow">
+      <h2>End-to-end lifecycle</h2>
+      <ol class="lifecycle">
+        <li><span class="lc-stage">Business Problem</span><p>Manual data cleaning and validation was slow, inconsistent and error-prone, and quality rules lived in people's heads rather than anywhere auditable.</p></li>
+        <li><span class="lc-stage">Business Context</span><p>Teams needed standardised, repeatable, auditable data quality without spending hours per file, and without automation silently corrupting data.</p></li>
+        <li><span class="lc-stage">Data Sources</span><p>Arbitrary Excel files plus a JSON definition of the business rules they must satisfy.</p></li>
+        <li><span class="lc-stage">Data Engineering / ETL</span><p>The pipeline profiles each column (types, ranges, nulls, distributions), then proposes and applies transformations once confirmed.</p></li>
+        <li><span class="lc-stage">Data Modeling</span><p>Rules-as-config in <strong>JSON</strong>, required fields, formats, allowed values, thresholds, kept transparent and version-controlled.</p></li>
+        <li><span class="lc-stage">Analytics &amp; Statistical Analysis</span><p>Validation checks produce a clear list of violations with severity and location, so issues are triaged not guessed.</p></li>
+        <li><span class="lc-stage">Visualization &amp; Reporting</span><p>Outputs a clean dataset plus a validation report documenting exactly what was checked, found and changed.</p></li>
+        <li><span class="lc-stage">Machine Learning / AI</span><p>Built with <strong>Claude Code</strong> (LLM-assisted), with a deliberate <strong>human-in-the-loop</strong> confirmation step before any change is applied.</p></li>
+        <li><span class="lc-stage">Business Impact</span><p>Cut manual data prep to near zero while keeping a human in control, and standardised quality enforcement across every dataset it touches.</p></li>
+        <li><span class="lc-stage">Lessons Learned</span><p>Human checkpoints keep AI automation trustworthy; rules-as-config make the same pipeline portable to new files without rewrites.</p></li>
+      </ol>
+    </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><p>© <span id="year"></span> Saurabh Lagad</p></div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
